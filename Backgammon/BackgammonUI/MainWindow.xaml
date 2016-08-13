@@ -1,0 +1,333 @@
+﻿<Window x:Class="Backgammon.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Backgammon"
+        mc:Ignorable="d"
+        Title="Backgammon" Height="653.922" Width="1069.526">
+    <Grid RenderTransformOrigin="0.481,0.456" Margin="0,0,-182,2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="233*"/>
+            <ColumnDefinition Width="78*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.011"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Button x:Name="rollDiceButton" Content="Roll The Dice" HorizontalAlignment="Left" Margin="761,344,0,0" VerticalAlignment="Top" Width="146" Height="48" Click="RollDiceButton_Click" IsEnabled="False"/>
+        <Canvas HorizontalAlignment="Left" Height="604" VerticalAlignment="Top" Width="726">
+            <Canvas.Background>
+                <ImageBrush ImageSource="Backgrounds\BackgammonBackGround.jpg"/>
+            </Canvas.Background>
+            <Canvas Height="1" Canvas.Left="250" Canvas.Top="286" Width="26"/>
+            <StackPanel x:Name="stackPane12"  HorizontalAlignment="Left" Height="239" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane12_MouseLeftButtonUp" Canvas.Left="78" Canvas.Top="342">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="179.409"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane10" HorizontalAlignment="Left" Height="242" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane10_MouseLeftButtonUp" Canvas.Left="163" Canvas.Top="340">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="179.408"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane8" HorizontalAlignment="Left" Height="237" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane8_MouseLeftButtonUp" Canvas.Left="243" Canvas.Top="342">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="179.663"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane6" HorizontalAlignment="Left" Height="237" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane6_MouseLeftButtonUp" Canvas.Left="406" Canvas.Top="345">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="179.239"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane4" HorizontalAlignment="Left" Height="237" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane4_MouseLeftButtonUp" Canvas.Left="488" Canvas.Top="346">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180.038"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane2" HorizontalAlignment="Left" Height="238" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane2_MouseLeftButtonUp" Canvas.Left="570" Canvas.Top="344">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="179.418"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane1" HorizontalAlignment="Left" Height="236" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane1_MouseLeftButtonUp" Canvas.Left="609" Canvas.Top="345">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="179.113"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane3" HorizontalAlignment="Left" Height="234" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane3_MouseLeftButtonUp" Canvas.Left="529" Canvas.Top="347">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="179.276"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane5" HorizontalAlignment="Left" Height="234" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane5_MouseLeftButtonUp" Canvas.Left="446" Canvas.Top="348">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="178.98"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane7" HorizontalAlignment="Left" Height="237" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane7_MouseLeftButtonUp" Canvas.Left="286" Canvas.Top="342">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="179.665"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane9" HorizontalAlignment="Left" Height="241" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane9_MouseLeftButtonUp" Canvas.Left="200" Canvas.Top="341">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="179.142"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane11" HorizontalAlignment="Left" Height="239" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane11_MouseLeftButtonUp" Canvas.Left="120" Canvas.Top="342">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.074"/>
+                        <RotateTransform Angle="179.729"/>
+                        <TranslateTransform Y="0.026"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane24" HorizontalAlignment="Left" Height="233" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane24_MouseLeftButtonUp" Canvas.Left="117" Canvas.Top="25">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="719.313"/>
+                        <TranslateTransform X="494.996" Y="-1.365"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane22" HorizontalAlignment="Left" Height="238" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane22_MouseLeftButtonUp" Canvas.Left="216" Canvas.Top="22">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="719.188"/>
+                        <TranslateTransform X="314.998" Y="-0.869"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane20" HorizontalAlignment="Left" Height="237" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane20_MouseLeftButtonUp" Canvas.Left="315" Canvas.Top="22">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="719.518"/>
+                        <TranslateTransform X="134.999" Y="-0.372"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane18" HorizontalAlignment="Left" Height="237" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane18_MouseLeftButtonUp" Canvas.Left="332" Canvas.Top="22">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="719.775"/>
+                        <TranslateTransform X="-45" Y="0.124"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane16" HorizontalAlignment="Left" Height="235" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane16_MouseLeftButtonUp" Canvas.Left="431" Canvas.Top="23">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="720.184"/>
+                        <TranslateTransform X="-224.999" Y="0.62"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane14" HorizontalAlignment="Left" Height="228" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane14_MouseLeftButtonUp" Canvas.Left="528" Canvas.Top="24">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="719.487"/>
+                        <TranslateTransform X="-404.997" Y="1.117"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane13" HorizontalAlignment="Left" Height="236" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane13_MouseLeftButtonUp" Canvas.Left="576" Canvas.Top="21">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="719.329"/>
+                        <TranslateTransform X="-494.996" Y="1.365"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane15" HorizontalAlignment="Left" Height="238" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane15_MouseLeftButtonUp" Canvas.Left="479" Canvas.Top="22">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="719.961"/>
+                        <TranslateTransform X="-314.998" Y="0.869"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane17" HorizontalAlignment="Left" Height="240" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane17_MouseLeftButtonUp" Canvas.Left="380" Canvas.Top="22">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="719.628"/>
+                        <TranslateTransform X="-134.999" Y="0.372"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane19" HorizontalAlignment="Left" Height="235" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane19_MouseLeftButtonUp" Canvas.Left="364" Canvas.Top="22">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="719.678"/>
+                        <TranslateTransform X="45" Y="-0.124"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane21" HorizontalAlignment="Left" Height="236" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane21_MouseLeftButtonUp" Canvas.Left="266" Canvas.Top="22">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="719.382"/>
+                        <TranslateTransform X="224.999" Y="-0.62"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPane23" HorizontalAlignment="Left" Height="235" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPane23_MouseLeftButtonUp" Canvas.Left="167" Canvas.Top="24">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="719.34"/>
+                        <TranslateTransform X="404.997" Y="-1.117"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackMiddlePoint" HorizontalAlignment="Left" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackMiddlePoint_MouseLeftButtonUp" Height="286" Canvas.Left="-146" Canvas.Top="122">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="719.313"/>
+                        <TranslateTransform X="494.996" Y="-1.365"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPlayerOneFinalPoint" HorizontalAlignment="Left" Height="257" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPlayerOneFinalPoint_MouseLeftButtonUp" Canvas.Left="175" Canvas.Top="23">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="720.183"/>
+                        <TranslateTransform X="494.996" Y="-1.365"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+            <StackPanel x:Name="stackPlayerTwoFinalPoint" HorizontalAlignment="Left" Height="258" VerticalAlignment="Top" Width="40"
+            	Background="Transparent" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="stackPlayerTwoFinalPoint_MouseLeftButtonUp" Canvas.Left="178" Canvas.Top="324">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="719.313"/>
+                        <TranslateTransform X="494.996" Y="-1.365"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+        </Canvas>
+        <Canvas Name="imgFirstDice" HorizontalAlignment="Left" Height="50" Margin="782,410,0,0" VerticalAlignment="Top" Width="50"/>
+        <Canvas Name="imgSecondDice" HorizontalAlignment="Left" Height="50" Margin="837,410,0,0" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="txtFirstPlayerName" HorizontalAlignment="Left" Height="36" Margin="761,55,0,0" TextWrapping="Wrap" Text="FirstPlayer" VerticalAlignment="Top" Width="146"/>
+        <TextBox x:Name="txtSecondPlayerName" HorizontalAlignment="Left" Height="36" Margin="761,96,0,0" TextWrapping="Wrap" Text="SecondPlayer" VerticalAlignment="Top" Width="146"/>
+        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="761,150,0,0" Click="startButton_Click"/>
+
+    </Grid>
+</Window>
