@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Backgammon
 {
-    public class Point:IPoint, IEnumerable<Checker>
+    public class Point : IPoint, IEnumerable<Checker>
     {
         private Stack<Checker> _checkers;
         public int Number { get; }
 
         public Point(int number)
         {
-            if(!(number>=1 && number <= 27))
+            if (!(number >= 1 && number <= 27))
             {
                 throw new BadPointNumberException();
             }
@@ -24,11 +24,11 @@ namespace Backgammon
 
         public bool IsVacant(int checkerType)
         {
-            if(checkerType!=1 && checkerType != 2)
+            if (checkerType != 1 && checkerType != 2)
             {
                 throw new BadPlayerNumberException();
             }
-            return GetCheckerType() == 0 || (GetCheckerType() != checkerType && _checkers.Count==1) || GetCheckerType()==checkerType;
+            return GetCheckerType() == 0 || (GetCheckerType() != checkerType && _checkers.Count == 1) || GetCheckerType() == checkerType;
         }
 
         public int GetCheckerType()
@@ -52,7 +52,7 @@ namespace Backgammon
 
         public IEnumerator<Checker> GetEnumerator()
         {
-            foreach(Checker checker in _checkers)
+            foreach (Checker checker in _checkers)
             {
                 yield return checker;
             }
@@ -60,7 +60,20 @@ namespace Backgammon
 
         public bool IsEmpty()
         {
-           return _checkers.Count == 0;
+            return _checkers.Count == 0;
+        }
+
+        public bool TryPopChecker(out Checker checker)
+        {
+            checker = null;
+
+            if (_checkers.Any())
+            {
+                checker = _checkers.Pop();
+                return true;
+            }
+
+            return false;
         }
 
         public Checker PopChecker()
@@ -68,7 +81,8 @@ namespace Backgammon
             try
             {
                 return _checkers.Pop();
-            }catch(Exception)
+            }
+            catch (Exception)
             {
                 throw new InvalidOperationException();
             }

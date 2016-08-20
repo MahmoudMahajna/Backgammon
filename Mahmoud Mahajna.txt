@@ -1,0 +1,48 @@
+*)Getting rid of magic numbers - a magic number is a constant without a meaningful name which is located in your code.
+It is magic in the sense that no one really has an idea as to how its value serves the purpose of the code.
+
+Example 1: "27" in Point.cs (line 17) may mean something to you, but it means nothing to me- and will mean nothing to you in a few months
+
+
+Consider this:
+
+private const int MeaningfulName = 27;
+
+The constant can then be used in your code, and can be changed (if necessary) by applying a single change to the constant's value-
+Instead of taking the risk of forgetting to change it somewhere.
+
+*)Point.PopChecker:
+Note that you are actually silenting the exception which contains info about what went wrong, and throwing an exception which contains no information, which will make understanding the issue harder
+In this case, it is better to let the exception propagate, or prevent it by applying the Try pattern to your class logic
+This way, instead of the method failing and stopping the flow of an innocent class which merely wanted to pop a checker, you can tell it that there's nothing to pop at the moment, which is fine.
+The calling method can now decide what to do with it, instead of you deciding for it that it has no right to execute further..
+
+
+ public bool TryPopChecker(out Checker checker)
+        {
+            checker = null;
+
+            if (_checkers.Any())
+            {
+                checker = _checkers.Pop();
+                return true;
+            }
+
+            return false;
+        }
+
+Consider this:
+An exception should be thrown when an error occured, such that the application could not recover from it,
+That error should be so terrible, that letting the code go beyond the point where the exception is thrown is dangerous.
+This is not the case when popping a checker off a stack..
+
+*)Throwing 'ArgumentNullException':
+Very good! consider though, that 'Board.FillPoint', which throws the exception, has several arguments
+Consider: 'throw new ArgumentNullException(nameof(point));'
+Always specify the name of the argument, even when there's only one parameter, since the exception could propagate beyond the caller,
+Where it would be harder for you to understand which argument was null and in what method.
+
+*)throwing the 'BadPointNumberException' is a very good idea - consider having it derive from 'ArgumentOutOfRangeException'
+which is the standard .NET exception for arguments which are expected to be in some range but arent.
+
+*)In general - you did a very good job!
